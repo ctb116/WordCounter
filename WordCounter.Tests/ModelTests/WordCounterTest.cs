@@ -9,14 +9,24 @@ namespace WordCounter.Tests
   public class RepeartCounterTest
   {
     [TestMethod]
-    public void getInput_returnsInput_String()
+    public void getUserInput_returnsUserInput_True()
     {
       string input = "cat";
-      RepeatCounter newRepeatCounter = new RepeatCounter(input);
+      List<string> inputList = new List<string> { "cat" };
 
-      string result = newRepeatCounter.GetInput();
+      RepeatCounter checker = new RepeatCounter(input, inputList);
 
-      Assert.AreEqual(input, result);
+      Assert.AreEqual(input, checker.GetInput());
+      CollectionAssert.AreEqual(inputList, checker.GetInputList());
     }
+    // [TestMethod]
+    // public void getInputList_returnInputList_ListSt()
+    // {
+    //   List<string> inputList = new List<string> { "cat" };
+    //   RepeatCounter newInputList = new RepeatCounter(inputList);
+    //
+    //
+    //   CollectionAssert.AreEqual(new List<string> { "cat" }, newInputList.GetInputList());
+    // }
   }
 }
