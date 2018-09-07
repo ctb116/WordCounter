@@ -12,21 +12,20 @@ namespace WordCounter.Tests
     public void getUserInput_returnsUserInput_True()
     {
       string input = "cat";
-      List<string> inputList = new List<string> { "cat" };
-
-      RepeatCounter checker = new RepeatCounter(input, inputList);
+      string secondInput = "Hello there cat";
+      RepeatCounter checker = new RepeatCounter(input, secondInput);
 
       Assert.AreEqual(input, checker.GetInput());
-      CollectionAssert.AreEqual(inputList, checker.GetInputList());
+      Assert.AreEqual(secondInput, checker.GetSecondInput());
     }
-    // [TestMethod]
-    // public void getInputList_returnInputList_ListSt()
-    // {
-    //   List<string> inputList = new List<string> { "cat" };
-    //   RepeatCounter newInputList = new RepeatCounter(inputList);
-    //
-    //
-    //   CollectionAssert.AreEqual(new List<string> { "cat" }, newInputList.GetInputList());
-    // }
+    [TestMethod]
+    public void secondInputSplit_returnSplit_True()
+    {
+      string input = "cat";
+      string secondInput = "Hello there cat";
+      RepeatCounter checker = new RepeatCounter(input, secondInput);
+
+      CollectionAssert.AreEqual(new string[]{ "Hello", "there", "cat", }, RepeatCounter.SplitSecondInput(secondInput));
+    }
   }
 }

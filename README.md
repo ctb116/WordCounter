@@ -1,9 +1,10 @@
 ## Specs
 
-1) User inputs a single word (first input)
-2) User inputs multiple words (second input)
-3) Program checks if any words from second input match the word from the first input.
-4) Program returns the number of exact word matches to User
+1) User inputs a single word (first input) _String_
+2) User inputs multiple words (second input) _String_
+3) Program splits second input into an array of Strings. _EX: input "Hello there cat" output { "Hello", "there", "cat" }_
+4) Program checks if any words from second input match the word from the first input.
+5) Program returns the number of exact word matches to User
 
 ## More detailed Specs
 

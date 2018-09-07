@@ -6,20 +6,27 @@ namespace WordCounter.Models
   public class RepeatCounter
   {
     private string _input;
-    private List<string> _inputList;
+    private string _secondInput;
 
-    public RepeatCounter (string input, List<string> inputList)
+    public RepeatCounter (string input, string secondInput)
     {
       _input = input;
-      _inputList = inputList;
+      _secondInput = secondInput;
     }
     public string GetInput()
     {
       return _input;
     }
-    public List<string> GetInputList()
+    public string GetSecondInput()
     {
-      return _inputList;
+      return _secondInput;
     }
+
+    public static string[] SplitSecondInput(string secondInput)
+    {
+      string[] secondInputList = secondInput.Split(' ');
+      return secondInputList;
+    }
+
   }
 }
