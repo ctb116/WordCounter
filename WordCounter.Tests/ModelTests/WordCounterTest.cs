@@ -37,13 +37,22 @@ namespace WordCounter.Tests
       Assert.AreEqual(3, checker.MatchCheck(input));
     }
     [TestMethod]
-    public void Exceptions_MatchCheck_True()
+    public void Capitalization_MatchCheck_Ignore()
     {
       string input = "cat";
       string secondInput = "Hello there cat CAT CaT cAt";
       RepeatCounter checker = new RepeatCounter(input, secondInput);
 
       Assert.AreEqual(4, checker.MatchCheck(input));
+    }
+    [TestMethod]
+    public void Puntuation_MatchCheck_Ignore()
+    {
+      string input = "cat";
+      string secondInput = "Hello there, Cat.";
+      RepeatCounter checker = new RepeatCounter(input, secondInput);
+
+      Assert.AreEqual(1, checker.MatchCheck(input));
     }
   }
 }
