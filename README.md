@@ -22,12 +22,12 @@ _Word Counter Program allows Users to know how many times a given word appears i
 
 _Program can account for capitalization:_
   * Example Input(Text): _cat CAT cAt CaT cAT Cat_
-  * Example Input(second): _cat_
+  * Example Input(word): _cat_
   * Example Output: _"Your word 'cat' was used 6 time(s)._
 
 _Program can account for basic grammar_
   * Example Input(Text): _cat! cat. 'cat' cat? 'cat!'_
-  * Example Input(second): _cat_
+  * Example Input(word): _cat_
   * Example Output: _"Your word 'cat' was used 5 time(s)._
 
 ## Setup/Installation Requirements
