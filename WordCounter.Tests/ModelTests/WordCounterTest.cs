@@ -28,13 +28,22 @@ namespace WordCounter.Tests
       CollectionAssert.AreEqual(new string[]{ "Hello", "there", "cat", }, RepeatCounter.SplitSecondInput(secondInput));
     }
     [TestMethod]
-    public void secondInputSplit_sentMatchCheck_True()
+    public void Basic_MatchCheck_True()
     {
       string input = "cat";
       string secondInput = "Hello there cat";
       RepeatCounter checker = new RepeatCounter(input, secondInput);
 
       Assert.AreEqual(1, checker.MatchCheck(input));
+    }
+    [TestMethod]
+    public void Exceptions_MatchCheck_True()
+    {
+      string input = "cat";
+      string secondInput = "Hello there cat. Cat, how are you today?";
+      RepeatCounter checker = new RepeatCounter(input, secondInput);
+
+      Assert.AreEqual(2, checker.MatchCheck(input));
     }
   }
 }
