@@ -27,3 +27,50 @@
 
 User enters capitalization. EX:  "Cat" or "CAT"
 User enters punctuation. EX: "cat." or " "cat" " (in quotes)
+
+
+# _Word Counter Program_
+
+#### _Week 6 Independent Project for Epicodus, 9.7.2018_
+
+#### By _**Catherine Bradley**_
+
+## Description
+
+_This is a C# program, run in command prompt, designed to demonstrate my skill writing C# code and using MS Testing by following BDD._
+
+_Word Counter Program asks the User to enter a word and then asks the User to enter a sentence. The program returns a number representing how frequently the first word appeared in the sentence._
+
+### Specifications
+
+* _1) User enters a word. (first input)_
+* _2) User enters a sentence. (second input)_
+* _3) Program returns a number representing how frequently first input was found in second input._
+
+  * _Example Input(first): "cat"_
+  * _Example Input(second): "Hello there cat"_
+  * _Example Output: 1_
+
+## Setup/Installation Requirements
+
+* _Clone this repository_
+* _Navigate to WordCounter.Solution/WordCounter/Models_
+* _type: mcs WordCounter.cs; mono WordCounter.exe_
+
+## Known Bugs
+
+* _None_
+
+## Support and contact details
+
+_For feedback, please contact Catherine Bradley at catherinetybradley@gmail.com_
+
+## Technologies Used
+
+* _C#_
+* _Mono_
+* _MS Test_
+
+### Legal
+
+*NA*
