@@ -49,10 +49,10 @@ namespace WordCounter.Tests
     public void Puntuation_MatchCheck_Ignore()
     {
       string input = "cat";
-      string secondInput = "Hello there, Cat.";
+      string secondInput = "Hello there, Cat. cat? cat! 'cat' cat";
       RepeatCounter checker = new RepeatCounter(input, secondInput);
 
-      Assert.AreEqual(1, checker.MatchCheck(input));
+      Assert.AreEqual(5, checker.MatchCheck(input));
     }
   }
 }

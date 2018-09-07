@@ -41,7 +41,7 @@ namespace WordCounter.Models
 
     public static string[] SplitSecondInput(string secondInput)
     {
-      string[] secondInputList = secondInput.Replace(".", " ").Split(' ');
+      string[] secondInputList = secondInput.Replace(".", " ").Replace("?", " ").Replace("'", " ").Replace("!", " ").Split(' ');
       return secondInputList;
     }
 
