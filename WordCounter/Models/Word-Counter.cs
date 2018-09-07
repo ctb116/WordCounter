@@ -22,6 +22,20 @@ namespace WordCounter.Models
       return _secondInput;
     }
 
+    public int MatchCheck(string input)
+    {
+      string[] secondInputList = RepeatCounter.SplitSecondInput(_secondInput);
+      int matchCount = 0;
+      foreach(string word in secondInputList)
+      {
+        if (word.Equals(input))
+        {
+        matchCount += matchCount + 1;
+        }
+      }
+      return matchCount;
+    }
+
     public static string[] SplitSecondInput(string secondInput)
     {
       string[] secondInputList = secondInput.Split(' ');

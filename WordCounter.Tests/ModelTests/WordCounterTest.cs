@@ -27,5 +27,14 @@ namespace WordCounter.Tests
 
       CollectionAssert.AreEqual(new string[]{ "Hello", "there", "cat", }, RepeatCounter.SplitSecondInput(secondInput));
     }
+    [TestMethod]
+    public void secondInputSplit_sentMatchCheck_True()
+    {
+      string input = "cat";
+      string secondInput = "Hello there cat";
+      RepeatCounter checker = new RepeatCounter(input, secondInput);
+
+      Assert.AreEqual(1, checker.MatchCheck(input));
+    }
   }
 }
