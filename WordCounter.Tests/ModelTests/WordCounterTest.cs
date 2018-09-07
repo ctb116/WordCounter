@@ -31,19 +31,19 @@ namespace WordCounter.Tests
     public void Basic_MatchCheck_True()
     {
       string input = "cat";
-      string secondInput = "Hello there cat";
+      string secondInput = "Hello there cat cat cat";
       RepeatCounter checker = new RepeatCounter(input, secondInput);
 
-      Assert.AreEqual(1, checker.MatchCheck(input));
+      Assert.AreEqual(3, checker.MatchCheck(input));
     }
     [TestMethod]
     public void Exceptions_MatchCheck_True()
     {
       string input = "cat";
-      string secondInput = "Hello there cat. Cat, how are you today?";
+      string secondInput = "Hello there cat CAT CaT cAt";
       RepeatCounter checker = new RepeatCounter(input, secondInput);
 
-      Assert.AreEqual(2, checker.MatchCheck(input));
+      Assert.AreEqual(4, checker.MatchCheck(input));
     }
   }
 }

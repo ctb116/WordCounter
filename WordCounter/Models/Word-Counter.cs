@@ -25,12 +25,15 @@ namespace WordCounter.Models
     public int MatchCheck(string input)
     {
       string[] secondInputList = RepeatCounter.SplitSecondInput(_secondInput);
+
+
+
       int matchCount = 0;
       foreach(string word in secondInputList)
       {
-        if (word.Equals(input))
+        if ((word.ToLower()).Equals(input.ToLower()))
         {
-        matchCount += matchCount + 1;
+        matchCount++;
         }
       }
       return matchCount;
