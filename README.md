@@ -20,7 +20,7 @@ _Word Counter Program allows Users to know how many times a given word appears i
   * _Example Input(second): "cat"_
   * _Example Output: "Your word 'cat' was used 4 time(s)._
 
-_Program can account for capitalization and common punctuation(?!'.) _
+_Program can account for capitalization and common punctuation(?!'.)_
 
 ## Setup/Installation Requirements
 
