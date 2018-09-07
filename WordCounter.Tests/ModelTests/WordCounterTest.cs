@@ -9,10 +9,14 @@ namespace WordCounter.Tests
   public class RepeartCounterTest
   {
     [TestMethod]
-    public void InputChecker_returnsInput_True()
+    public void getInput_returnsInput_String()
     {
-      RepeatCounter testFirstInput = new RepeatCounter();
-      Assert.AreEqual("Cat", testFirstInput.InputCheck("cat"));
+      string input = "cat";
+      RepeatCounter newRepeatCounter = new RepeatCounter(input);
+
+      string result = newRepeatCounter.GetInput();
+
+      Assert.AreEqual(input, result);
     }
   }
 }

@@ -5,10 +5,15 @@ namespace WordCounter.Models
 {
   public class RepeatCounter
   {
-    public string input;
-    public string InputCheck(string input)
+    private string _input;
+
+    public RepeatCounter (string input)
     {
-      return input;
+      _input = input;
+    }
+    public string GetInput()
+    {
+      return _input;
     }
   }
 }
